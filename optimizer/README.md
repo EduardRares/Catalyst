@@ -11,6 +11,14 @@ cd /Users/eduard/Desktop/CCC
 
 `--output-dir` starts with the best supplied outputs in `output/level-6` when the directory is new. Subsequent runs reuse its per-case incumbents. Do not run two optimizers against the same output directory simultaneously.
 
+Continue from the current best results while skipping small:
+
+```sh
+./optimizer/run.sh --output-dir output/level-6 --seconds 7200 --workers 4 --checkpoint-every 300 --resume --skip-small
+```
+
+`--skip-small` schedules only medium, large and enormous. Existing small programs remain in the four output files and are validated in checkpoints. `--resume` keeps every `work/*/best.txt` and resumes unfinished search rounds from `work/search-state.json`; older runs are recovered from completed search logs. A fresh run without `--resume` restarts search scheduling while still retaining its best programs. Checkpoint names are unique to each run, so previous snapshots remain available.
+
 Results:
 
 - Four `out_level-6_*.txt` files in the selected output directory, ready to upload.
