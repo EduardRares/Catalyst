@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -16,23 +16,37 @@ int main(int argc, char* argv[]) {
     int n;
     if (!(f >> n)) return 1;
 
+    // Directions 1..6: right, down-right, down-left, left, up-left, up-right.
+    const int dr[] = {0, 0, 1, 1, 0, -1, -1};
+    const int dc[] = {0, 2, 1, -1, -2, -1, 1};
+
     for (int i = 0; i < n; i++) {
-        int r;
-        if (!(f >> r) || r < 0) return 1;
+        int radius, rows, cols;
+        if (!(f >> radius >> rows >> cols) || rows <= 0 || cols <= 0) return 1;
 
-        for (int row = 0; row <= 2 * r; row++) {
-            int padding = abs(r - row);
-            int cells = 2 * r + 1 - padding;
-
-            g << string(padding, '-');
-            for (int col = 0; col < cells; col++) {
-                if (col > 0) g << '-';
-                bool border = row == 0 || row == 2 * r
-                           || col == 0 || col == cells - 1;
-                g << (border ? '*' : 'O');
+        vector<string> board(rows);
+        int emitterRow = -1, emitterCol = -1, direction = 0;
+        for (int row = 0; row < rows; row++) {
+            if (!(f >> board[row]) || static_cast<int>(board[row].size()) != cols) return 1;
+            for (int col = 0; col < cols; col++) {
+                if (board[row][col] >= '1' && board[row][col] <= '6') {
+                    emitterRow = row;
+                    emitterCol = col;
+                    direction = board[row][col] - '0';
+                }
             }
-            g << string(padding, '-') << '\n';
         }
+        if (direction == 0) return 1;
+
+        int row = emitterRow + dr[direction];
+        int col = emitterCol + dc[direction];
+        while (row >= 0 && row < rows && col >= 0 && col < cols) {
+            if (board[row][col] == 'O') board[row][col] = 'M';
+            row += dr[direction];
+            col += dc[direction];
+        }
+
+        for (const string& line : board) g << line << '\n';
         g << '\n';
     }
     return 0;
