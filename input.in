@@ -1,155 +1,131 @@
 10
-8 17 33
---------*-*-3-*-2-*-*-*-*--------
--------*-O-M-O-O-M-M-M-M-*-------
-------*-O-O-O-O-O-O-O-M-O-*------
------*-O-O-O-O-O-M-M-M-O-M-*-----
-----*-O-O-M-M-O-O-M-O-O-O-O-*----
----*-M-O-O-O-M-O-M-O-M-O-O-O-*---
---*-O-M-M-O-O-O-O-O-M-O-M-O-M-*--
--*-O-O-O-O-O-M-M-M-M-O-O-O-M-O-*-
-*-O-O-M-O-O-O-M-O-O-O-M-O-M-M-M-*
--*-O-O-O-O-M-O-O-O-M-O-O-O-O-M-*-
---*-O-O-M-O-O-O-O-M-O-O-M-O-M-*--
----*-M-M-O-M-O-O-M-O-O-O-O-O-*---
-----1-O-M-M-M-O-O-O-O-M-M-M-*----
------*-M-O-O-O-O-O-O-M-O-O-*-----
-------*-O-O-O-O-M-O-M-O-O-*------
--------*-M-O-O-O-O-O-O-O-*-------
---------*-*-*-6-*-*-*-5-*--------
+8
+10
+T B T - T B
+- F - T B -
+T T B T - F
+T T F B F -
+T B F T B B
+T B T F F B
+B - - B - B
+- T - - B F
+F F T B B T
+T F T - F T
 
-7 15 29
--------*-*-*-*-*-*-*-*-------
-------*-M-O-O-O-M-M-O-4------
------*-M-M-O-M-O-O-M-O-*-----
-----2-O-M-O-O-O-O-O-M-M-*----
----*-O-M-O-O-O-M-O-M-O-O-3---
---*-O-O-O-O-M-M-M-O-O-M-O-*--
--*-M-O-O-O-O-O-M-O-O-O-M-M-*-
-*-O-M-O-O-O-O-O-O-O-O-M-O-O-*
--*-O-O-M-O-O-M-O-O-O-M-O-O-*-
---*-O-O-M-O-O-O-M-O-O-O-O-*--
----*-O-M-O-M-M-O-M-O-O-O-*---
-----6-M-O-O-O-O-O-O-M-O-*----
------*-O-M-M-O-O-O-O-O-*-----
-------1-O-O-O-O-M-O-O-*------
--------*-*-*-*-*-*-*-5-------
+6
+10
+- T T T - F
+- F F F F T
+F - - T - -
+B F B - T T
+- T - - F -
+F F - T B -
+- T T T B T
+B F - - B T
+- T F F B -
+B B F - - B
 
-7 15 29
--------*-*-*-*-3-*-*-*-------
-------1-O-O-M-O-M-O-M-*------
------*-M-O-M-O-O-O-O-O-*-----
-----*-O-O-O-M-M-O-M-O-O-*----
----2-M-O-O-O-O-O-O-O-O-O-*---
---*-O-O-O-M-M-M-O-O-O-O-M-*--
--*-M-M-O-M-O-O-M-O-M-O-O-M-*-
-*-O-O-O-O-O-O-M-O-M-M-M-M-O-*
--*-M-M-O-M-O-M-M-O-M-O-O-O-*-
---*-M-O-O-O-O-O-O-O-O-M-O-5--
----*-M-M-O-O-M-M-M-O-O-O-4---
-----*-O-M-O-O-O-M-O-O-M-*----
------*-O-O-O-O-O-O-M-O-*-----
-------*-O-M-O-O-O-O-O-*------
--------*-*-6-*-*-*-*-*-------
+3
+10
+- T F - B -
+F - T - - -
+- B B T T F
+F F B F T F
+- F T F - B
+B F - B B T
+B T F T B F
+T F - F T T
+- F - - F T
+T T B T - T
 
-9 19 37
----------*-*-*-*-*-*-*-*-*-*---------
---------*-M-M-O-O-O-M-O-O-M-*--------
--------*-O-M-O-O-O-M-O-O-O-O-*-------
-------*-O-O-O-O-O-M-O-O-M-M-O-*------
------*-O-O-O-O-O-M-O-O-O-O-O-O-*-----
-----1-O-O-M-O-O-O-O-M-O-O-O-O-O-*----
----*-M-O-M-M-M-O-O-O-O-O-O-O-O-M-*---
---*-O-O-O-O-O-M-M-O-M-M-M-O-O-M-O-*--
--*-O-O-O-O-O-O-O-O-O-M-O-M-O-O-M-O-*-
-*-M-M-O-M-M-O-M-M-O-O-M-O-O-O-O-O-M-*
--*-O-M-M-M-O-M-O-O-M-O-O-O-O-M-M-O-*-
---*-O-O-M-O-O-O-M-M-O-M-O-O-O-O-M-*--
----*-O-M-O-M-O-O-O-O-M-O-M-O-O-O-*---
-----*-M-O-M-O-O-O-M-O-M-M-M-O-M-*----
------*-M-O-O-M-M-M-M-O-O-O-M-O-*-----
-------*-M-M-M-M-M-M-M-M-O-O-M-4------
--------*-O-O-O-O-O-O-O-O-O-M-*-------
---------*-O-O-O-O-O-O-M-M-M-*--------
----------6-*-*-*-*-*-*-*-*-*---------
+3
+10
+- B B F T -
+B T T F B F
+F - F B T T
+- F B T - F
+T - T - B -
+T F F T T B
+B F - - B B
+F F T F F -
+- B - F B T
+B T T - F F
 
-9 19 37
----------*-*-*-*-*-*-*-*-*-*---------
---------*-M-O-O-O-O-M-O-O-M-*--------
--------*-M-M-O-M-O-O-O-M-O-O-3-------
-------*-M-O-M-O-M-M-O-M-O-O-O-*------
------*-O-O-O-O-O-M-M-M-O-O-O-O-*-----
-----*-O-O-O-M-M-O-O-O-M-M-O-M-O-*----
----*-O-O-M-O-M-O-O-O-O-O-O-O-M-O-*---
---2-O-O-O-O-M-O-O-O-M-O-O-O-O-M-O-*--
--*-O-O-O-O-O-O-O-O-O-O-M-M-O-O-O-O-*-
-*-O-M-M-M-M-O-O-O-M-M-M-M-M-O-O-O-O-*
--*-O-O-O-O-O-O-M-O-M-O-M-M-O-O-O-O-*-
---6-M-M-O-O-O-M-M-O-O-M-O-M-O-M-O-*--
----*-M-M-O-O-M-O-O-O-M-O-O-O-M-O-*---
-----*-M-O-M-O-O-O-M-M-O-O-O-M-M-4----
------*-O-O-O-M-M-M-M-O-M-M-O-O-*-----
-------*-O-O-O-M-M-O-O-O-M-O-M-*------
--------*-O-M-O-O-M-O-M-O-O-O-*-------
---------1-O-M-O-M-O-O-O-M-O-*--------
----------*-*-*-*-*-*-*-*-5-*---------
+5
+10
+F T - T B -
+B T T - F B
+- T F F B F
+- F B - T -
+- - T F B T
+- B B F T T
+- F T B B -
+F - F B B B
+B - T T - -
+- F T T B T
 
-6 13 25
-------*-*-*-*-*-*-*------
------*-M-M-M-O-O-O-3-----
-----*-O-M-M-O-O-O-O-*----
----*-O-O-M-O-O-M-M-M-*---
---*-M-O-O-M-O-M-O-O-O-*--
--2-O-O-O-M-O-M-O-O-M-M-*-
-*-O-O-O-O-O-O-O-M-O-O-M-*
--*-O-O-O-O-O-M-O-O-M-O-*-
---*-O-O-O-O-O-O-O-O-M-*--
----*-M-O-O-M-O-M-M-O-*---
-----*-M-O-O-O-M-O-M-*----
------*-O-M-M-O-M-O-*-----
-------*-*-*-*-*-*-*------
+3
+10
+F F B - B -
+- - - T F T
+B B B B B T
+T F - B F -
+- T T T F F
+T T - F - B
+- - F B - -
+- F - F F -
+F T B F - F
+T T T F B F
 
-6 13 25
-------*-*-*-*-2-*-3------
------*-O-O-O-M-O-O-4-----
-----*-O-O-M-M-M-O-O-*----
----*-O-O-O-M-O-O-M-O-*---
---*-O-O-O-M-M-O-M-O-O-*--
--*-O-M-O-M-M-M-O-O-O-O-*-
-*-M-M-O-M-M-M-O-M-M-O-O-*
--1-M-O-O-O-O-O-O-O-M-O-*-
---*-M-O-M-M-M-O-O-O-O-*--
----*-O-O-M-M-O-O-O-M-*---
-----*-M-O-O-M-O-O-O-5----
------*-M-M-M-M-O-O-*-----
-------*-*-*-*-*-*-*------
+5
+10
+T B T - - B
+T - - F B B
+B B F B T -
+B T T T B T
+- - B T - -
+F B B B - T
+T T T - B F
+- B T B B B
+- T - T T -
+- F B - B B
 
-3 7 13
----*-*-*-*---
---*-O-O-O-*--
--1-O-M-O-O-*-
-*-O-O-O-O-M-*
--6-O-O-O-M-*-
---*-O-O-M-*--
----*-*-*-*---
+8
+10
+F F - T B T
+T B F F B T
+F T T T - -
+T - F F B -
+B T - T F B
+B T T F F T
+F B B F F B
+T T T T - F
+T - F - F -
+- T - F - -
 
-3 7 13
----*-*-*-*---
---1-M-O-O-3--
--*-O-O-O-O-*-
-*-O-M-O-O-M-*
--*-M-O-O-O-*-
---*-M-M-M-*--
----*-*-5-*---
+4
+10
+F F - - B -
+F - T F B -
+B B - F T B
+B - F - - -
+- F F F - -
+F - T - B T
+T T B F B F
+B T B T - T
+B F T - B B
+B B - - B -
 
-4 9 17
-----*-*-*-2-*----
----*-O-M-M-M-*---
---*-M-O-O-O-O-*--
--*-O-O-O-O-O-O-*-
-*-O-O-O-M-O-M-O-*
--*-O-M-O-M-O-O-4-
---*-O-O-O-M-O-*--
----*-O-O-M-M-*---
-----*-*-*-*-*----
+8
+10
+T - B B T T
+T T T - - B
+B F - B F B
+F - T T B B
+F B B - B T
+- F - T - B
+- B B - T B
+F - B T - B
+B - - B T F
+B F T - - T
 
