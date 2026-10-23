@@ -1,0 +1,17 @@
+# Compiled C++ executables and object files
+/main
+*.out
+*.exe
+*.o
+*.obj
+
+# Debug symbols
+*.dSYM/
+*.pdb
+
+# Build directories
+/build/
+/cmake-build-*/
+
+# macOS metadata
+.DS_Store
