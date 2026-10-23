@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
 #include <string>
 #include <utility>
 #include <vector>
@@ -23,18 +22,35 @@ int main(int argc, char* argv[]) {
     const int dc[] = {0, 2, 1, -1, -2, -1, 1};
 
     for (int i = 0; i < n; i++) {
-        int radius, ticks;
-        if (!(f >> radius >> ticks) || radius <= 0 || ticks < 0) return 1;
-        int rows = 2 * radius + 1;
-        int cols = 4 * radius + 1;
+        int radius, rows, cols, ticks;
+        if (!(f >> radius >> rows >> cols) || radius <= 0
+            || rows != 2 * radius + 1 || cols != 4 * radius + 1) return 1;
 
-        vector<string> board(rows, string(cols, '-'));
+        vector<string> pattern(rows);
+        vector<pair<int, int>> required;
         for (int row = 0; row < rows; row++) {
-            int padding = abs(radius - row);
-            for (int col = padding; col < cols - padding; col += 2) {
-                bool border = row == 0 || row == rows - 1
-                           || col == padding || col == cols - padding - 1;
-                board[row][col] = border ? '*' : 'O';
+            if (!(f >> pattern[row]) || static_cast<int>(pattern[row].size()) != cols) return 1;
+            for (int col = 0; col < cols; col++) {
+                if (pattern[row][col] == 'M') required.push_back({row, col});
+            }
+        }
+        if (!(f >> ticks) || ticks < 0 || required.empty()) return 1;
+
+        vector<string> board = pattern;
+        vector<vector<bool>> forbidden(rows, vector<bool>(cols, false));
+        for (const auto& cell : required) {
+            board[cell.first][cell.second] = 'O';
+            for (int direction = 1; direction <= 6; direction++) {
+                int row = cell.first + dr[direction];
+                int col = cell.second + dc[direction];
+                if (row >= 0 && row < rows && col >= 0 && col < cols
+                    && pattern[row][col] == 'O') forbidden[row][col] = true;
+            }
+        }
+        vector<pair<int, int>> adjacent;
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (forbidden[row][col]) adjacent.push_back({row, col});
             }
         }
 
@@ -54,6 +70,7 @@ int main(int argc, char* argv[]) {
         int position[6];
         bool active[6] = {};
         for (int emitter = 0; emitter < 6; emitter++) position[emitter] = emitter * radius;
+        int submitted = 0;
 
         for (int tick = 0; tick < ticks; tick++) {
             for (int emitter = 0; emitter < 6; emitter++) {
@@ -90,10 +107,30 @@ int main(int argc, char* argv[]) {
                     else if (hits[row][col] >= 3) board[row][col] = 'O';
                 }
             }
+
+            // A match is the exact target component, with no extra matter touching it.
+            bool matches = true;
+            for (const auto& cell : required) {
+                if (board[cell.first][cell.second] != 'M') {
+                    matches = false;
+                    break;
+                }
+            }
+            if (matches) {
+                for (const auto& cell : adjacent) {
+                    if (board[cell.first][cell.second] == 'M') {
+                        matches = false;
+                        break;
+                    }
+                }
+            }
+            if (matches) {
+                submitted++;
+                for (const auto& cell : required) board[cell.first][cell.second] = 'O';
+            }
         }
 
-        for (const string& line : board) g << line << '\n';
-        g << '\n';
+        g << submitted << '\n';
     }
     return 0;
 }
