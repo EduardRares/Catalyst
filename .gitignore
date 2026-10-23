@@ -15,3 +15,6 @@
 
 # macOS metadata
 .DS_Store
+
+# Local editor settings
+.vscode/
