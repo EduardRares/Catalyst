@@ -18,3 +18,7 @@
 
 # Local editor settings
 .vscode/
+
+# Optimizer build products
+/optimizer/build/
+**/__pycache__/
